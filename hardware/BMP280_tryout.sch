@@ -1,0 +1,388 @@
+EESchema Schematic File Version 4
+EELAYER 29 0
+EELAYER END
+$Descr User 8500 5500
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L taobao-components:BMP280 U1
+U 1 1 5D13EAD5
+P 4250 2950
+F 0 "U1" H 4250 3450 50  0000 C CNN
+F 1 "BMP280" H 4250 3350 50  0000 C CNN
+F 2 "footprint-lib:BMP280" H 4250 2200 50  0001 C CNN
+F 3 "" H 4250 2950 50  0001 C CNN
+	1    4250 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0101
+U 1 1 5D13F5C3
+P 3250 2550
+F 0 "#PWR0101" H 3250 2400 50  0001 C CNN
+F 1 "+3V3" H 3300 2750 50  0000 C CNN
+F 2 "" H 3250 2550 50  0001 C CNN
+F 3 "" H 3250 2550 50  0001 C CNN
+	1    3250 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 2550 3250 2750
+Wire Wire Line
+	3250 2850 3550 2850
+Wire Wire Line
+	3550 2750 3250 2750
+Connection ~ 3250 2750
+Wire Wire Line
+	3250 2750 3250 2850
+$Comp
+L power:GND #PWR0102
+U 1 1 5D13FC2C
+P 3250 3350
+F 0 "#PWR0102" H 3250 3100 50  0001 C CNN
+F 1 "GND" H 3300 3150 50  0000 C CNN
+F 2 "" H 3250 3350 50  0001 C CNN
+F 3 "" H 3250 3350 50  0001 C CNN
+	1    3250 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3250 3350 3250 3150
+Wire Wire Line
+	3250 3050 3550 3050
+Wire Wire Line
+	3550 3150 3250 3150
+Connection ~ 3250 3150
+Wire Wire Line
+	3250 3150 3250 3050
+$Comp
+L taobao-c:C106,0603 C1
+U 1 1 5D140418
+P 2600 4200
+F 0 "C1" V 2350 4200 50  0000 C CNN
+F 1 "C104,0603" V 2450 4200 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2600 4200 50  0001 C CNN
+F 3 "~" H 2600 4200 50  0001 C CNN
+	1    2600 4200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D1415DA
+P 2850 4200
+F 0 "#PWR0104" H 2850 3950 50  0001 C CNN
+F 1 "GND" V 2900 4050 50  0000 R CNN
+F 2 "" H 2850 4200 50  0001 C CNN
+F 3 "" H 2850 4200 50  0001 C CNN
+	1    2850 4200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2100 4200 2500 4200
+Wire Wire Line
+	2700 4200 2850 4200
+Text Label 5450 3050 2    50   ~ 0
+SCK_3V
+Text Label 5450 3150 2    50   ~ 0
+SDI_3V
+Text Label 5450 2750 2    50   ~ 0
+SDO_ADR_3V
+Text Label 5450 2850 2    50   ~ 0
+CS_3V
+Wire Wire Line
+	5450 2750 4950 2750
+Wire Wire Line
+	5450 2850 4950 2850
+Wire Wire Line
+	5450 3050 4950 3050
+Wire Wire Line
+	5450 3150 4950 3150
+$Comp
+L power:+5V #PWR0105
+U 1 1 5D142077
+P 2550 800
+F 0 "#PWR0105" H 2550 650 50  0001 C CNN
+F 1 "+5V" H 2600 1000 50  0000 C CNN
+F 2 "" H 2550 800 50  0001 C CNN
+F 3 "" H 2550 800 50  0001 C CNN
+	1    2550 800 
+	-1   0    0    -1  
+$EndComp
+$Comp
+L taobao-rpack:RN_103,0603 RN1
+U 1 1 5D1426A9
+P 2350 1200
+F 0 "RN1" H 2050 1250 50  0000 R CNN
+F 1 "RN_103,0603" H 2050 1200 50  0000 R CNN
+F 2 "Resistor_SMD:R_Array_Concave_4x0603" V 2625 1200 50  0001 C CNN
+F 3 "~" H 2350 1200 50  0001 C CNN
+	1    2350 1200
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 800  2550 900 
+Wire Wire Line
+	2550 900  2450 900 
+Wire Wire Line
+	2450 900  2450 1000
+Connection ~ 2550 900 
+Wire Wire Line
+	2550 900  2550 1000
+$Comp
+L Transistor_FET:BSS138 Q2
+U 1 1 5D143ED9
+P 1200 1950
+F 0 "Q2" V 1500 1950 50  0000 C CNN
+F 1 "BSS138" V 1600 1950 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1400 1875 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1200 1950 50  0001 L CNN
+	1    1200 1950
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+3V3 #PWR0106
+U 1 1 5D14C0EC
+P 2250 800
+F 0 "#PWR0106" H 2250 650 50  0001 C CNN
+F 1 "+3V3" H 2300 1000 50  0000 C CNN
+F 2 "" H 2250 800 50  0001 C CNN
+F 3 "" H 2250 800 50  0001 C CNN
+	1    2250 800 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 800  2250 900 
+Wire Wire Line
+	2350 1000 2350 900 
+Wire Wire Line
+	2350 900  2250 900 
+Connection ~ 2250 900 
+Wire Wire Line
+	2250 900  2250 950 
+$Comp
+L Transistor_FET:BSS138 Q1
+U 1 1 5D14CEF1
+P 1800 1750
+F 0 "Q1" V 2100 1750 50  0000 C CNN
+F 1 "BSS138" V 2200 1750 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 2000 1675 50  0001 L CIN
+F 3 "https://www.fairchildsemi.com/datasheets/BS/BSS138.pdf" H 1800 1750 50  0001 L CNN
+	1    1800 1750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2250 950  1800 950 
+Wire Wire Line
+	1800 950  1800 1550
+Connection ~ 2250 950 
+Wire Wire Line
+	2250 950  2250 1000
+Wire Wire Line
+	1800 950  1200 950 
+Wire Wire Line
+	1200 950  1200 1750
+Connection ~ 1800 950 
+Wire Wire Line
+	2250 1400 2250 1450
+Wire Wire Line
+	2250 1450 650  1450
+Wire Wire Line
+	650  1450 650  2050
+Wire Wire Line
+	650  2050 1000 2050
+Wire Wire Line
+	2350 1400 2350 1500
+Wire Wire Line
+	2350 1500 1300 1500
+Wire Wire Line
+	1300 1500 1300 1850
+Wire Wire Line
+	1300 1850 1600 1850
+Wire Wire Line
+	2000 1850 2450 1850
+Wire Wire Line
+	2450 1850 2450 1400
+Wire Wire Line
+	1400 2050 2550 2050
+Wire Wire Line
+	2550 2050 2550 1400
+Text Label 750  2050 0    50   ~ 0
+SDI_3V
+Text Label 1550 2050 0    50   ~ 0
+SDI_SDA_5V
+Text Label 1300 1850 0    50   ~ 0
+SCK_3V
+Text Label 2000 1850 0    50   ~ 0
+SCK_SCI_5V
+$Comp
+L taobao-d:D_1N4148_T4 D1
+U 1 1 5D159CBA
+P 4250 1750
+F 0 "D1" H 4250 1500 50  0000 C CNN
+F 1 "D_1N4148_T4" H 4250 1600 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-123" V 4250 1750 50  0001 C CNN
+F 3 "~" V 4250 1750 50  0001 C CNN
+	1    4250 1750
+	-1   0    0    1   
+$EndComp
+Text Label 3700 1750 0    50   ~ 0
+CS_3V
+Wire Wire Line
+	3700 1750 4150 1750
+Text Label 4900 1750 2    50   ~ 0
+CS_5V
+Wire Wire Line
+	4900 1750 4350 1750
+$Comp
+L power:+3V3 #PWR0107
+U 1 1 5D15C171
+P 4000 800
+F 0 "#PWR0107" H 4000 650 50  0001 C CNN
+F 1 "+3V3" H 4050 1000 50  0000 C CNN
+F 2 "" H 4000 800 50  0001 C CNN
+F 3 "" H 4000 800 50  0001 C CNN
+	1    4000 800 
+	1    0    0    -1  
+$EndComp
+$Comp
+L taobao-r:R103,0603 R1
+U 1 1 5D15C750
+P 4000 1000
+F 0 "R1" H 4100 1050 50  0000 L CNN
+F 1 "R103,0603" H 4100 1000 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 4000 1000 50  0001 C CNN
+F 3 "~" H 4000 1000 50  0001 C CNN
+	1    4000 1000
+	1    0    0    -1  
+$EndComp
+Text Label 3400 1300 0    50   ~ 0
+SDO_ADR_3V
+Text Label 4750 1300 2    50   ~ 0
+SDO_ADR_3V
+Wire Wire Line
+	3400 1300 4000 1300
+Wire Wire Line
+	4000 1300 4000 1100
+Wire Wire Line
+	4750 1300 4000 1300
+Connection ~ 4000 1300
+Wire Wire Line
+	4000 800  4000 900 
+$Comp
+L Connector:Conn_01x07_Female J1
+U 1 1 5D16086F
+P 6900 2850
+F 0 "J1" H 6950 2900 50  0000 L CNN
+F 1 "BMP280_HEADER" H 6950 2800 50  0000 L CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x07_P1.27mm_Vertical" H 6900 2850 50  0001 C CNN
+F 3 "~" H 6900 2850 50  0001 C CNN
+	1    6900 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 5D161429
+P 6100 2350
+F 0 "#PWR0108" H 6100 2200 50  0001 C CNN
+F 1 "+3V3" H 6150 2550 50  0000 C CNN
+F 2 "" H 6100 2350 50  0001 C CNN
+F 3 "" H 6100 2350 50  0001 C CNN
+	1    6100 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0109
+U 1 1 5D161ACB
+P 6250 2350
+F 0 "#PWR0109" H 6250 2200 50  0001 C CNN
+F 1 "+5V" H 6300 2550 50  0000 C CNN
+F 2 "" H 6250 2350 50  0001 C CNN
+F 3 "" H 6250 2350 50  0001 C CNN
+	1    6250 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0110
+U 1 1 5D1627D6
+P 6450 2350
+F 0 "#PWR0110" H 6450 2100 50  0001 C CNN
+F 1 "GND" H 6450 2150 50  0000 C CNN
+F 2 "" H 6450 2350 50  0001 C CNN
+F 3 "" H 6450 2350 50  0001 C CNN
+	1    6450 2350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6450 2350 6450 2550
+Wire Wire Line
+	6450 2550 6700 2550
+Wire Wire Line
+	6250 2350 6250 2650
+Wire Wire Line
+	6250 2650 6700 2650
+Wire Wire Line
+	6100 2350 6100 2750
+Wire Wire Line
+	6100 2750 6700 2750
+Text Label 6100 2850 0    50   ~ 0
+SCK_SCI_5V
+Text Label 6100 2950 0    50   ~ 0
+SDO_ADR_3V
+Text Label 6100 3050 0    50   ~ 0
+SDI_SDA_5V
+Text Label 6100 3150 0    50   ~ 0
+CS_5V
+Wire Wire Line
+	6100 2850 6700 2850
+Wire Wire Line
+	6100 2950 6700 2950
+Wire Wire Line
+	6100 3050 6700 3050
+Wire Wire Line
+	6100 3150 6700 3150
+Text Notes 3900 4150 0    150  ~ 0
+3 DRC ERROR accepted
+$Comp
+L taobao-c:C106,0603 C2
+U 1 1 5D16E833
+P 2600 4600
+F 0 "C2" V 2350 4600 50  0000 C CNN
+F 1 "C104,0603" V 2450 4600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2600 4600 50  0001 C CNN
+F 3 "~" H 2600 4600 50  0001 C CNN
+	1    2600 4600
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5D16E83D
+P 2850 4600
+F 0 "#PWR0103" H 2850 4350 50  0001 C CNN
+F 1 "GND" V 2900 4450 50  0000 R CNN
+F 2 "" H 2850 4600 50  0001 C CNN
+F 3 "" H 2850 4600 50  0001 C CNN
+	1    2850 4600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2100 4600 2500 4600
+Wire Wire Line
+	2700 4600 2850 4600
+Text Label 2100 4200 0    50   ~ 0
+VDD
+Text Label 3350 2750 0    50   ~ 0
+VDD
+Text Label 3350 2850 0    50   ~ 0
+VDDIO
+Text Label 2100 4600 0    50   ~ 0
+VDDIO
+$EndSCHEMATC
